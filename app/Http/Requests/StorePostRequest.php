@@ -33,7 +33,7 @@ class StorePostRequest extends FormRequest
         return[
             'photo.required' => 'A imagem é obrigatória',
             'photo.mimes' => 'Extensão não suportada',
-            'description.required' => 'A descrição é obrigatoria'
+            'description.required' => 'E-mail não pode ser vazio'
         ];
     }
 }
