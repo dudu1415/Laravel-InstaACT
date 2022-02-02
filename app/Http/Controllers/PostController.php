@@ -65,7 +65,7 @@ class PostController extends Controller
         }
         return redirect('/dashboard');
     }
-    // }{
+    // 
     //     DB::beginTransaction();
     //     try {
     //         if (str_contains($input['description'], 'porta'))
