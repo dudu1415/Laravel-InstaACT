@@ -20,17 +20,13 @@ class PostService
         DB::beginTransaction();
         try {
             $result = $num1+$num2;
-
         } catch (\Throwable $th) {
-            DB::rollBack();
-            logger()->error($th);
             [
                 'success' => true,
                 'message' => 'Soma feita com sucesso',
                 'data' => $result
             ];
         }
-        DB::commit();
         return [
             'success' => false,
             'message' => 'Erro ao fazer soma'

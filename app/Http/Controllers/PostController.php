@@ -41,6 +41,7 @@ class PostController extends Controller
     public function create()
     {
         $user = auth()->user();
+
         return view('posts.create', compact('user'));
     }
 
@@ -65,7 +66,7 @@ class PostController extends Controller
         }
         return redirect('/dashboard');
     }
-    // 
+    //
     //     DB::beginTransaction();
     //     try {
     //         if (str_contains($input['description'], 'porta'))
@@ -77,7 +78,7 @@ class PostController extends Controller
     //     }
     // }
         // $user = auth()->user();
-        
+
         // $path = $request->photo->store('public/images');
         // $url  = Storage::url($path);
 
@@ -87,7 +88,7 @@ class PostController extends Controller
         //     'user_id' => $user->id
         // ]);
         // return redirect('/dashboard');
-    
+
 
     /**
      * Display the specified resource.

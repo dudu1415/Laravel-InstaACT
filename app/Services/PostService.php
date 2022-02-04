@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class PostService
-{   
+{
     /**
      * @var PostRepository
      */
@@ -25,10 +25,8 @@ class PostService
     {
         DB::beginTransaction();
         try {
-
             $path = $photo->store('public/images');
             $url  = Storage::url($path);
-
             $post = $this->repository->create([
                 'image' => $url,
                 'description' => $input['description'],
